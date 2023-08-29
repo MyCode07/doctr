@@ -1,0 +1,102 @@
+.hero {
+    // .hero__container
+
+    &__container {
+    }
+
+    // .hero__body
+
+    &__body {
+    }
+
+    // .hero__flex
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    // .hero__left
+
+    &__left {
+        width: calc(50% - 20px);
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        ._section-title {
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+
+            @media (max-width: 768px) {
+                display: block;
+
+                & > :not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            & > :not(:last-child) {
+                margin-right: 20px;
+            }
+
+            ._btn {
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // .hero__right
+
+    &__right {
+        width: calc(50% - 20px);
+        position: relative;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .png {
+            border-radius: 800px 800px 40px 40px;
+
+            @media (max-width: 768px) {
+                border-radius: 600px 600px 40px 40px;
+            }
+        }
+
+        .svg {
+            border-radius: 0 0 40px 0;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+            transform: translate(25%, -10%);
+
+            @media (max-width: 768px) {
+                width: 100vw;
+                max-width: none;
+                height: 50%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                object-fit: cover;
+
+                border-radius: 0 0 24px 24px;
+            }
+        }
+    }
+}
+._container {
+}
